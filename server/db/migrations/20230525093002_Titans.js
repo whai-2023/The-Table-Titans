@@ -5,7 +5,7 @@ const { default: knex } = require('knex')
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-  return knex.schema.createTable('titans', (table) => {
+  return knex.schema.createTable('Titans', (table) => {
     table.increments('id').primary()
     table.string('name')
     table.string('answer')
@@ -18,5 +18,5 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = (knex) => {
-  return knex.schema.dropTable('titans')
+  return knex.schema.dropTable('Titans')
 }
