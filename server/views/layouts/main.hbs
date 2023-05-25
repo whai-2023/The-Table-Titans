@@ -16,14 +16,28 @@
 
   button {
     font-size: 50px;
-    margin: 200px 0px 50px 0px;
+    margin: 150px 0px 50px 0px;
   }
+
+  .header {
+    font-size:20px;
+    text-align:left;
+  }
+
+  .footer {
+    font-size:20px;
+    text-align:left;
+    margin: 300px 0px 50px 0px;
+  }
+
   </style>
 
 </head>
 
 <body>
+  <div class="header">{{>header}}</div>
   {{{body}}}
+  <div class="footer">{{>footer}}</div>
 </body>
 
 </html>

@@ -9,6 +9,8 @@ router.get('/', (req, res) => {
   const viewData = {
     title: 'The Titans',
     quiz: 'Start Quiz!',
+    header: 'The Table Titans',
+    footer: '@The Table Titans Whai 2023',
   }
 
   res.render(template, viewData)
