@@ -10,6 +10,7 @@ exports.up = function (knex) {
     table.string('name')
     table.string('answer')
     table.string('description')
+    table.string('image')
   })
 }
 
