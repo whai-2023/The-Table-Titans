@@ -1,0 +1,55 @@
+<img src='{{image}}'/>
+<p>{{name}}</p>
+{{>question}}
+{{#each options}}
+  <button>{{this}}</button>
+{{/each}}
+<!--<button>{{answer}}</button>
+<button>{{answer}}</button>
+<button>{{answer}}</button>
+<button>{{answer}}</button>
+-->
+
+
+
+
+
+{{!-- 
+viewData = {
+  options = [
+    'Titan who rebelled and was made to carry the sky',
+    'Bringer of fire',
+    'Children of titans',
+    'Agriculture and the harvest' << Correct Answer placement randomised
+  ]
+}
+
+
+ --}}
+
+
+
+ <!--
+
+ URL: After clicking button 'Start Quiz'
+  localhost:3000/quiz/:id
+  const titanId = req.params.id 
+  //search for that titan id in the titans array [], const titanObject = titans.find(titan => titan.id === titanId);
+   titans = [
+    {
+      id: 1,
+      name: Cronus
+      answer: ...,
+      description: ...,
+      image: /cronus
+    },
+    {
+      ...
+    },
+    {
+      ...
+    },
+    ...
+  ]
+
+ -->
