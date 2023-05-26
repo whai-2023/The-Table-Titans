@@ -20,7 +20,7 @@ const allTitans = [
 ]
 
 function pickTitans(realTitan) {
-  let titans = ['Themis', 'Prometheus', 'Rhea']
+  let titans = ['Themis', 'Prometheus', 'Rhea'] //pick random titans
   titans.push(realTitan)
   return titans.sort((a, b) => 0.5 - Math.random())
 }
