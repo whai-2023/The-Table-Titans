@@ -1,0 +1,10 @@
+{{title}}
+{{titan.id}}
+
+{{#each choice}}
+  <form action='/quiz/question/{{../titan.id}}/{{this}}' method='post'>
+  <button type='submit'>{{this}}</button>
+</form>
+{{/each}}
+
+<a href='/'>Nah, go back home pls</a>
