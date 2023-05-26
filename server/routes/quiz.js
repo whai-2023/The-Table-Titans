@@ -28,7 +28,7 @@ function pickTitans(realTitan) {
 router.get('/question/:id', async (req, res) => {
   let id = req.params.id
   const titan = await db.getATitanById(id)
-  console.log('titan', titan)
+  // console.log('titan', titan)
   const template = 'quiz'
   const viewData = {
     title: 'Which Titan is it?',

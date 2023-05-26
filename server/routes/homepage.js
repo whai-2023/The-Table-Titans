@@ -24,4 +24,10 @@ router.get('/', (req, res) => {
   //   })
 })
 
+//we need 1. keep track of the score that the users getting
+// show the score page at the end
+//add go back home button\
+//add next q button
+// show descriptions and images
+
 module.exports = router
