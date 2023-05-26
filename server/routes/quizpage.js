@@ -32,5 +32,7 @@ router.post('/:id', async (req, res) => {
   res.redirect('/:answer')
 })
 
+function getRandomInt(number) {}
+
 module.exports = router
 // '../public/cronus.png'
