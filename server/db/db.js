@@ -57,16 +57,7 @@ function getUser(id, db = connection) {
 // traits = traits.id, traits.titans_id, traits.description, traits.images
 
 function getTitans(id, db = connection) {
-  return db('titans')
-    .join('traits', 'titans.trait_id', 'traits.id')
-    .where('titans.id', id)
-    .select(
-      'titans.id',
-      'titans.name',
-      'traits.description',
-      'traits.images',
-      'traits_id as traitsId'
-    )
+  return db('titans').select()
 }
 
 function keepScore(result, games) {

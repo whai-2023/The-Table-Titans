@@ -17,5 +17,5 @@ server.use(express.urlencoded({ extended: true }))
 // Routes
 server.use('/', userRoutes)
 server.use('/quiz/question', quizRoutesQuestion)
-server.use('/quiz', quizRoutes)
+// server.use('/quiz', quizRoutes)
 module.exports = server

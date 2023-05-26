@@ -26,7 +26,7 @@ function pickTitans(realTitan) {
 }
 
 router.get('/:id', async (req, res) => {
-  let id = req.params.id
+  let id = Number(req.params.id)
   const titan = await db.getATitanById(id)
   // console.log('titan', titan)
   const template = 'quiz'
@@ -34,20 +34,23 @@ router.get('/:id', async (req, res) => {
     title: 'Which Titan is it?',
     choice: pickTitans(titan?.name),
     titan,
+    nextQuestion: id + 1,
   }
   res.render(template, viewData)
 })
 
 router.post('/:id/:input', async (req, res) => {
-  let id = req.params.id
+  let id = Number(req.params.id)
   const titan = await db.getATitanById(id)
   let input = req.params.input
   let correctAnswer = titan.name === input
+  let realAnswer = correctAnswer ? 'Correct' : 'Incorrect'
   await db.updateAnswer(id, correctAnswer)
   const template = 'showAnswer'
   const viewData = {
-    correctAnswer,
+    realAnswer,
     titan,
+    nextQuestion: id + 1,
   }
 
   res.render(template, viewData)

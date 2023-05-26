@@ -7,7 +7,6 @@ const router = express.Router()
 
 router.get('/', async (req, res) => {
   const titans = await db.getTitans()
-  console.log(titans)
   const template = 'home'
   const viewData = {
     title: 'The Titans',
@@ -16,7 +15,6 @@ router.get('/', async (req, res) => {
     header: 'The Table Titans',
     footer: '@The Table Titans Whai 2023',
   }
-  console.log(viewData.image)
 
   res.render(template, viewData)
 
