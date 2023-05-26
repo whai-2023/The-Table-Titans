@@ -25,7 +25,7 @@ function pickTitans(realTitan) {
   return titans.sort((a, b) => 0.5 - Math.random())
 }
 
-router.get('/question/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   let id = req.params.id
   const titan = await db.getATitanById(id)
   // console.log('titan', titan)
@@ -38,7 +38,7 @@ router.get('/question/:id', async (req, res) => {
   res.render(template, viewData)
 })
 
-router.post('/question/:id/:input', async (req, res) => {
+router.post('/:id/:input', async (req, res) => {
   let id = req.params.id
   const titan = await db.getATitanById(id)
   let input = req.params.input

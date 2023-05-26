@@ -1,6 +1,6 @@
 {{title}}
 {{titan.id}}
-
+<img src='{{titan.image}}'/>
 {{#each choice}}
   <form action='/quiz/question/{{../titan.id}}/{{this}}' method='post'>
   <button type='submit'>{{this}}</button>

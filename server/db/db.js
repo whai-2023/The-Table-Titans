@@ -2,6 +2,17 @@ const environment = process.env.NODE_ENV || 'development'
 const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
+/*function randomiseOptions(titans) {
+  const randomizeTitans = [...titans]
+  for (let i = randomizeTitans.length - 1; i > 0; i--) {
+    const x = (Math.floor(Math.random() * (i + 1))[
+      (randomizeTitans[i], randomizeTitans[x])
+    ] = [randomizeTitans[x], randomizeTitans[i]])
+  }
+  return randomizeTitans
+}
+console.log(randomiseOptions())*/
+
 module.exports = {
   getATitanById: getATitanById,
   updateAnswer: updateAnswer,
